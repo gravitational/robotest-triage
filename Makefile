@@ -7,7 +7,7 @@ CREDENTIALS_EXAMPLE=credentials.json.example
 CONFIG=config.json
 CONFIG_EXAMPLE=config.json.example
 DATADIR=data
-SRCS=fetch.py
+SRCS=fetch.py analyze.py
 
 .PHONY: help
 # kudos to https://gist.github.com/prwhite/8168133 for inspiration
@@ -47,6 +47,12 @@ $(DATADIR):
 fetch: ## Fetch job console logs from Jenkins.
 fetch: $(FREEZE) | $(DATADIR)
 	python fetch.py
+
+# TODO: use a better dependency than the .PHONY fetch
+.PHONY: analyze
+analyze: ## Run analytics on fetched data.
+analyze: fetch
+	python analyze.py $(DATADIR)/*
 
 .PHONY: configure
 configure: $(CONFIG) $(CREDENTIALS)
