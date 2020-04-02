@@ -4,3 +4,7 @@ credentials.json
 
 # data fetched from jenkins
 data/
+
+# local make artifacts for partial builds
+.requirements-installed.txt
+.dev-requirements-installed.txt
