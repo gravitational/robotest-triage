@@ -3,7 +3,7 @@
 This repo contains automation to speed up bulk triage of
 [Robotest](https://github.com/gravitational/robotest/) failures.
 
-It stems from my personal need to triage nightly failures, where
+It stems from Walt's personal need to triage nightly failures, where
 each nightly run may have 10s (think 40+) individual runs.
 
 ## Getting Started
