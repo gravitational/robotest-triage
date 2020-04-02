@@ -1,0 +1,6 @@
+# user specific files
+config.json
+credentials.json
+
+# data fetched from jenkins
+data/
