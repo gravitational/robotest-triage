@@ -1,6 +1,5 @@
 {
     "url": "https://jenkins.gravitational.io",
     "job": "Gravity-Nightly",
-    "jid_start": 340,
-    "jid_end":   352
+    "jid_start": 340
 }
