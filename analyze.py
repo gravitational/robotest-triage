@@ -134,4 +134,4 @@ if __name__ == "__main__":
         fails = failures.get(version, 0)
         passes = successes.get(version, 0)
         total = passes + fails
-        print("{:10} {:3}/{:3} passed ({:.2}%)".format(version, passes, total, passes/total))
+        print("{:10} {:3}/{:3} passed ({:3.0f}%)".format(version, passes, total, passes/total * 100))
