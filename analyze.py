@@ -30,11 +30,12 @@ def status_block_filter(logs):
     This is faster than regexing all lines in the file for the log pattern.
     """
     summary_marker = "******** TEST SUITE COMPLETED **********\n"
-    go_test_marker = "--- FAIL: TestMain"
+    go_test_fail_marker = "--- FAIL: TestMain"
+    go_test_pass_marker = "PASS\n"
     after_summary = False
     for line in logs:
         if after_summary:
-            if line.startswith(go_test_marker):
+            if line == go_test_pass_marker or line.startswith(go_test_fail_marker):
                 break
             else:
                 yield line
