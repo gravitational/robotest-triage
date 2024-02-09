@@ -3,7 +3,7 @@ flake8==3.7.9
 ## The following requirements were added by pip freeze:
 entrypoints==0.3
 mccabe==0.6.1
-pip==20.0.2
+pip==23.3
 pycodestyle==2.5.0
 pyflakes==2.1.1
 setuptools==44.1.0
